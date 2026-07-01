@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-poppins" });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -19,6 +18,7 @@ export const metadata: Metadata = {
   title: "The Leap Academy | Developing People. Strengthening Leadership.",
   description:
     "The Leap Academy equips individuals, leaders, entrepreneurs, and organisations through leadership development, training, speaking engagements, and practical learning resources.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://leap-academy.vercel.app'),
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
