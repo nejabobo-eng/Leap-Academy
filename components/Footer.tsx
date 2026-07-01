@@ -36,11 +36,13 @@ export default function Footer() {
 		<div>
 		  <h4 className="text-sm font-semibold">Contact</h4>
 		  <ul className="mt-3 space-y-2 text-sm text-foreground/80">
+			<li>WhatsApp: <a className="text-primary hover:underline" href="https://wa.me/27723518634" target="_blank" rel="noreferrer">+27 72 351 8634</a></li>
 			<li>Email: <a className="text-primary hover:underline" href="mailto:info@theleapacademy.org">info@theleapacademy.org</a></li>
-			<li>Phone: <a className="text-primary hover:underline" href="tel:+27000000000">+27 00 000 0000</a></li>
-			<li>WhatsApp: <a className="text-primary hover:underline" href="https://wa.me/27xxxxxxxxx" target="_blank" rel="noreferrer">+27 xx xxx xxxx</a></li>
-			<li>Location: South Africa</li>
+			<li>Location: KZN, South Africa</li>
 		  </ul>
+		  <div className="mt-4">
+			<a href="https://wa.me/27723518634" target="_blank" rel="noreferrer" className="btn btn-primary">Chat on WhatsApp</a>
+		  </div>
 		</div>
 		<div>
 			<h4 className="text-sm font-semibold">Follow Us</h4>
